@@ -1,6 +1,6 @@
 <?php
   // ここにDBに登録する処理を記述する oneline_bbsがデータベース名
-  $dsn = 'mysql:dbname=oneline_bbs;host=localhost';
+  $dsn = 'mysql:dbname=localhost/oneline_bbs/bbs.php;host=localhost';
   $user = 'root';
   $password='';
   $dbh = new PDO($dsn, $user, $password);

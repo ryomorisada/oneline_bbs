@@ -97,6 +97,27 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="assets/js/bootstrap.js"></script>
   <script src="assets/js/form.js"></script>
+  <ul>
+  
+  <?php
+     foreach ($posts as $post_each) {
+       echo '<li>';
+       echo $post_each['nickname'].' ';
+       echo $post_each['comment'].' ';
+
+       //一旦日付型に変換
+       $created = strtotime($post_each['created']);
+
+      //書式を変換
+      $created = date('Y/m/d',$created);
+
+       //echo $post_each['created'].' ';
+      echo $created;
+      echo '</li>';
+      }
+  ?>
+  
+</ul>
 </body>
 </html>
 
